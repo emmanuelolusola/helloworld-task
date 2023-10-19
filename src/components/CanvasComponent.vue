@@ -33,6 +33,9 @@ export default {
 body {
  background-color: #121212;
  color: #f5f5f5;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
 }
 .canvas {
  display: grid;
@@ -58,6 +61,8 @@ body {
  height: 6px;
  background-color: #f5f5f5;
  border-radius: 50%;
+ margin-left: -2px;
+ margin-top: -2px;
 }
 
 
