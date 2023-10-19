@@ -20,17 +20,11 @@ export default {
  methods: {
   toggleBox(index) {
     if (this.boxes[index].selected) {
-      this.boxes = this.boxes.map((box) => ({ ...box, selected: false }));
+      this.boxes[index].selected = false;
     } else {
-      this.boxes[index].selected = true;
+      this.boxes = this.boxes.map((box, i) => (i === index ? { ...box, selected: true } : box));
     }
-
-
-    if (window.innerWidth < 768) {
-      const randomIndex = Math.floor(Math.random() * this.boxes.length);
-      this.boxes[randomIndex].selected = true;
-    }
-  },
+  }
  },
 };
 </script>
