@@ -19,10 +19,8 @@ export default {
  },
  methods: {
     toggleBox(index) {
-      // Deselect all boxes
       this.boxes = this.boxes.map((box) => ({ ...box, selected: false }));
 
-      // Select the box at the given index
       this.boxes[index].selected = true;
     },
  },
@@ -34,8 +32,6 @@ body {
  background-color: #121212;
  color: #f5f5f5;
  box-sizing: border-box;
- margin: 0;
- padding: 0;
 }
 .canvas {
  display: grid;
@@ -64,9 +60,6 @@ body {
  margin-left: -2px;
  margin-top: -2px;
 }
-
-
-
 
 .box:hover {
  background-color: #313131;
